@@ -17,7 +17,16 @@ export default function Proposal() {
       return prev + 1;
     });
   };
+const handleYes = () => {
+  window.open(
+    "https://wa.me/918879896069?text=Hi%20Atharva!%20Yes,%20I'd%20love%20to%20go%20for%20coffee%20with%20you%20☕❤️",
+    "_blank"
+  );
 
+  setTimeout(() => {
+    navigate("/valentine");
+  }, 1000);
+};
   return (
     <div className="h-screen w-screen relative overflow-hidden
       bg-gradient-to-br from-pink-200 via-pink-100 to-rose-200
@@ -48,7 +57,7 @@ export default function Proposal() {
 
         <div className="flex gap-6 justify-center relative">
           <button
-            onClick={() => navigate("/valentine")}
+            onClick={handleYes}
             className="px-10 py-3
               bg-pink-500 text-white text-lg
               rounded-full shadow-md
